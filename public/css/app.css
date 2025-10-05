@@ -1,0 +1,149 @@
+/* |--------------------------------------------------------------------------
+| VARIABLES DE COLOR PERSONALIZADAS DE ECORECICLA
+|--------------------------------------------------------------------------
+| Define las variables de color clave para un fácil mantenimiento.
+*/
+:root {
+    --ecorecicla-primary: #00a86b; /* Verde Principal de la Marca */
+    --ecorecicla-dark: #121212; /* Fondo Oscuro (Negro casi total) */
+    --ecorecicla-text-p: rgb(211, 211, 211); /* Gris Claro para Párrafos */
+    --ecorecicla-text-h: white; /* Blanco para Títulos y elementos de contraste */
+    --ecorecicla-secondary-bg: #2a2a2a; /* Fondo Secundario para Inputs/Cards */
+}
+
+/* |--------------------------------------------------------------------------
+| ESTILOS GLOBALES
+|--------------------------------------------------------------------------
+| Aplicados al cuerpo de la página.
+*/
+body {
+    font-family: "Open Sans", sans-serif;
+    background-color: var(--ecorecicla-dark); /* Fondo oscuro general */
+    color: var(--ecorecicla-text-p); /* Color de texto por defecto (párrafos) */
+    min-height: 100vh; /* Asegura que el cuerpo ocupe al menos la altura de la vista */
+}
+
+/* Regla para asegurar que los títulos sean blancos para alto contraste */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--ecorecicla-text-h);
+}
+
+/* |--------------------------------------------------------------------------
+| UTILIDADES DE COLOR DE BOOTSTRAP SOBREESCRITAS
+|--------------------------------------------------------------------------
+*/
+
+/* Color principal de texto (usado en .text-primary, .text-success de Bootstrap) */
+.text-primary, .text-success {
+    color: var(--ecorecicla-primary) !important; 
+}
+
+/* Color principal de fondo (usado en .bg-primary, .bg-success de Bootstrap) */
+.bg-success, .bg-primary {
+    background-color: var(--ecorecicla-primary) !important;
+}
+
+/* Botones principales (.btn-success, .btn-primary) */
+.btn-success, .btn-primary {
+    background-color: var(--ecorecicla-primary) !important;
+    border-color: var(--ecorecicla-primary) !important;
+    color: white !important;
+    transition: background-color 0.3s ease;
+}
+
+.btn-success:hover, .btn-primary:hover {
+    background-color: #008a54 !important; /* Un tono un poco más oscuro al hacer hover */
+    border-color: #008a54 !important;
+}
+
+/* |--------------------------------------------------------------------------
+| ELIMINACIÓN DEL AZUL DE BOOTSTRAP EN BORDES Y FOCO
+|--------------------------------------------------------------------------
+*/
+
+/* SOBREESCRIBE EL COLOR AZUL DE FOCO (focus) CON EL VERDE */
+.form-control:focus {
+    background-color: var(--ecorecicla-secondary-bg) !important;
+    color: var(--ecorecicla-text-p) !important;
+    border-color: var(--ecorecicla-primary); /* Borde verde al enfocar */
+    /* El box-shadow es la sombra brillante que generalmente es azul. Lo cambiamos a verde. */
+    box-shadow: 0 0 0 0.25rem rgba(0, 168, 107, 0.5); /* Sombra verde (con transparencia) */
+}
+
+/* REGLA PRINCIPAL: Asegura que la clase .border-primary siempre sea verde */
+.border-primary {
+    border-color: var(--ecorecicla-primary) !important;
+}
+
+/* REGLA ADICIONAL: Asegura que todos los bordes de utilidad de Bootstrap usen nuestro primary (por defecto, son azules) */
+[class*="border-primary"] {
+    border-color: var(--ecorecicla-primary) !important;
+}
+
+
+/* |--------------------------------------------------------------------------
+| ESTILOS ESPECÍFICOS DE COMPONENTES
+|--------------------------------------------------------------------------
+*/
+
+/* Navbar */
+.navbar {
+    background-color: var(--ecorecicla-dark) !important; 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
+}
+
+.navbar-brand, .nav-link {
+    color: var(--ecorecicla-text-h) !important; 
+}
+
+.nav-link:hover {
+    color: var(--ecorecicla-primary) !important; 
+}
+
+/* Footer */
+footer {
+    background-color: var(--ecorecicla-dark) !important; 
+    color: var(--ecorecicla-text-p) !important;
+}
+
+.footer-title {
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--ecorecicla-text-h); 
+}
+
+.footer-list {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-link {
+    color: var(--ecorecicla-text-p); 
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+    color: var(--ecorecicla-primary); 
+}
+
+/* Estilos para las tarjetas */
+.card {
+    border-radius: 0.75rem; 
+    background-color: var(--ecorecicla-dark); 
+    border: 1px solid rgba(255, 255, 255, 0.1) !important; /* Borde de tarjeta sutil */
+}
+
+/* Estilos para inputs en formularios (Contacto o Login) */
+.form-control {
+    background-color: var(--ecorecicla-secondary-bg) !important; 
+    color: var(--ecorecicla-text-p) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.5rem;
+}
+
+/* Estilo para listas sin viñetas dentro de contenido oscuro */
+.list-unstyled li {
+    line-height: 1.8;
+}
