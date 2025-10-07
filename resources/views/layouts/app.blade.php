@@ -22,10 +22,10 @@
     </head>
     
     <body>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
                 <a class="navbar-brand" href="/">
-                    <img src="{{ asset('images/logo.png') }}" alt="Logo EcoRecicla" width="70" height="70" class="d-inline-block align-text-top">
+                    <img src="{{ asset('img/logo_ecorecicla.png') }}" alt="Logo EcoRecicla" width="50" height="50" class="d-inline-block align-middle">
                     EcoRecicla
                 </a>
 
@@ -39,10 +39,13 @@
                         <li class="nav-item"><a href="/nosotros" class="nav-link">Nosotros</a></li>
                         <li class="nav-item"><a href="/planes" class="nav-link">Planes</a></li>
                         <li class="nav-item"><a href="/contacto" class="nav-link">Contacto</a></li>
+                        <li class="nav-item"><a href="/vistauser" class="nav-link">Vista usuario</a></li>
+
+                        
                     </ul>
                 </div>
             </div>
-        </nav> 
+        </nav>
         
         <main class="container-fluid p-0">
             @if (isset($slot)) {{ $slot }} @else @yield('content') @endif

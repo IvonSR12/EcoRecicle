@@ -141,8 +141,8 @@
         <!-- Imagen de impacto -->
         <div class="col-lg-6 mb-5 mb-lg-0">
             <img src="{{ asset('images/impacto_sostenible.jpg') }}" 
-                 alt="Gráfico de impacto ambiental" 
-                 class="img-fluid rounded-4 shadow-lg">
+                alt="Gráfico de impacto ambiental" 
+                class="img-fluid rounded-4 shadow-lg">
         </div>
 
         <!-- Texto y Métricas -->
